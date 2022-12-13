@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button, Card } from "react-bootstrap";
+import cartContext from "../../store/CartContext";
 
 function ProductCard(props){
+    const CartCntxt = useContext(cartContext);
+    function addToCart(){
+        CartCntxt.addProductCart(props.product);
+    }
+
     return(
         <Card className='mt-5 mb-5 ml-0 mr-0 border-0 p-0' style={{ width: 'auto' }}>
             <Card.Header className="border-0 bg-white">
@@ -12,8 +18,8 @@ function ProductCard(props){
                 <Card.Text className="text-center">{props.product.description}</Card.Text>
             </Card.Body>
             <Card.Footer className="d-flex justify-content-between align-items-center border-0 bg-white">
-                <span>{props.product.price}</span>
-                <Button type='primary'>Buy</Button>
+                <span>${props.product.price}</span>
+                <Button type='primary' onClick={addToCart}>Buy</Button>
             </Card.Footer>
         </Card>
     );

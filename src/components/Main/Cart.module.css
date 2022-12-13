@@ -1,0 +1,11 @@
+.Cart {
+  position: fixed;
+  right: 0;
+  top: 4rem;
+  background-color: white;
+  border: 0.1rem black solid;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 50%;
+  z-index: 1;
+}
