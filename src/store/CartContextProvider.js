@@ -13,12 +13,9 @@ function CartContextProvider(props) {
         return [...cartProductList, item];
       });
     } else {
-      setCartProductList((cartProductList) => {
         const updatedList = [...cartProductList];
-        const qty = updatedList[index].quantity;
-        updatedList[index].quantity= qty+1;
-        return updatedList;
-      });
+        updatedList[index].quantity++;
+      setCartProductList(updatedList);
     }
   };
 

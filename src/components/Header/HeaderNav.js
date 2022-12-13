@@ -23,6 +23,9 @@ function HeaderNav(props) {
           <Link className="mx-5" to="/about">
             About
           </Link>
+          <Link className="mx-5" to="/contactUs">
+            Contact Us
+          </Link>
         </Nav>
         {props.path === "/product" && (
           <Nav>
