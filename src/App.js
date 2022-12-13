@@ -1,6 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import AboutPage from "./pages/AboutPage.js";
+import HomePage from "./pages/Home.page.js";
 import ProductPage from "./pages/ProductPage.js";
 
 function App() {
@@ -11,6 +12,9 @@ function App() {
       </Route>
       <Route path="/about">
         <AboutPage></AboutPage>
+      </Route>
+      <Route path="/home">
+        <HomePage></HomePage>
       </Route>
     </React.Fragment>
   );
